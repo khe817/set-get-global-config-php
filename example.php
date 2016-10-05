@@ -5,4 +5,6 @@ $key = 'test_config';
 $value = 'test_value';
 Config::set($key, $value);
 
-echo Config::get($key);
+if ( Config::is_set($key) ) {
+	echo Config::get($key);
+}
