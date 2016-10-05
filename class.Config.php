@@ -34,4 +34,17 @@ class Config
 	public static function set( $key, $value ) {
 		self::$vars[$key] = $value;
 	}
+
+	/**
+	 * check if a configuration is set
+	 * @param  string  $key configuration key
+	 * @return boolean
+	 */
+	public static function is_set( $key ) {
+		if ( isset(self::$vars[$key]) ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
