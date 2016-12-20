@@ -36,6 +36,14 @@ class Config
 	}
 
 	/**
+	 * UnSet configuration
+	 * @param string $key   configuration key
+	 */
+	public static function un_set( $key ) {
+		unset(self::$vars[$key]);
+	}
+
+	/**
 	 * check if a configuration is set
 	 * @param  string  $key configuration key
 	 * @return boolean
